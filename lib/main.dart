@@ -34,6 +34,11 @@ class MyApp extends StatelessWidget {
           ),
         ),
         textTheme: const TextTheme(
+            titleLarge: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w500,
+              height: 1,
+            ),
             titleMedium: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20,
@@ -43,7 +48,8 @@ class MyApp extends StatelessWidget {
               fontSize: 16,
             )),
       ),
-      home: ProductDetails(product: products[0]),
+      // home: ProductDetails(product: products[0]),
+      home: const HomeScreen(),
     );
   }
 }
