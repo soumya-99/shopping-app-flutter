@@ -15,8 +15,22 @@ class CartScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final cartItem = cart[index];
           return ListTile(
-            title: Text(cartItem['title'].toString()),
+            leading: CircleAvatar(
+              backgroundImage: AssetImage(cartItem['imageUrl'] as String),
+              radius: 30,
+            ),
+            title: Text(
+              cartItem['title'].toString(),
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
             subtitle: Text('Size: ${cartItem['size']}'),
+            trailing: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.delete,
+                color: Colors.red,
+              ),
+            ),
           );
         },
       ),
